@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>
+        Simple Interest
+    </title>
+<script>
+    function si(){
+        var a=prompt("Enter the principle");
+        if(isNaN(a)==false)
+        {
+
+        var b=prompt("Enter the Time");
+
+        if(isNaN(b)==false)
+        {
+            var c=prompt("Enter The interest");
+
+        if(isNaN(c)==false) {
+            var d = (a * b * c) / 100;
+            window.alert("Simple Interest=" + d);
+        }
+    else{
+            window.alert("Incorrect value!! Try Again");
+
+        }
+        }
+        else
+        {
+            window.alert("Incorrect value!! Try Again");
+        }
+        }
+        else
+        {
+            window.alert("Incorrect value!! Try Again");
+
+        }
+
+    };
+</script>
+</head>
+<body>
+<h2>
+
+
+   Q1) Prompt for amount, interest rate and no. of years and calculate simple interest.
+
+</h2>
+
+    <button style="position: absolute;left:44%;" onclick="si()" >START </button>
+</body>
+</html>
