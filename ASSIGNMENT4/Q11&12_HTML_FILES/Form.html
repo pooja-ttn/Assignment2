@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To The New</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            background-color: white;
+            text-align: center;
+        }
+
+        .wrapper{
+            margin: 0 50px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .header{
+            width : 960px;
+        }
+
+
+        .logo{
+            color: teal;
+            padding: 20px 0;
+            font-size: 32px;
+            font-weight: lighter;
+            display: inline-block;
+        }
+
+        .nav{
+            display: inline-block;
+            float: right;
+            margin-top: 15px;
+            padding: 20px 0;
+        }
+
+        .nav li{
+            list-style: none;
+            display: inline-block;
+            color: teal;
+            margin-left: 20px;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .form-wrapper{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-top: 50px;
+        }
+
+        .form{
+            width: 460px;
+        }
+
+        .form-header{
+            background-color: #BBC0CA;
+            color: whitesmoke;
+            padding: 20px;
+            border: 5px #BBC0CA solid;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .form label{
+            color: #797979;
+        }
+
+        #title, #desc{
+            width: 97%;
+            border: 2px solid #BBC0CA;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #version{
+            border: 2px solid #BBC0CA;
+            border-radius: 5px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        .form-content select{
+            width: 100%;
+            border: 2px #00C697 solid;
+            border-radius: 5px;
+            background-color: #00C697;
+            color: white;
+            padding: 5px;
+            font-weight: bolder;
+        }
+
+        .form-content{
+            border: #BBC0CA 2px solid;
+            padding: 10px 20px;
+        }
+
+        .form-content div{
+            padding: 5px 0;
+        }
+
+
+
+        .radio div{
+            width: 45%;
+            display: inline-block;
+            color: #797979;
+        }
+
+
+        .upload-btn{
+            border: #BBC0CA 2px solid;
+            border-radius:6px;
+            position: relative;
+            width: 100%;
+            color: darkgrey;
+            display: inline-block;
+            background-color: white;
+            text-align: center;
+            height: 20px;
+        }
+
+        .upload-btn div{
+            border: #BBC0CA 1px solid;
+            border-radius: 0 0px 0px 0px;
+            display: inline-block;
+            position: absolute;
+            padding-bottom: 8px;
+            background-color: #BBC0CA;
+            top :0;
+            right: 0;
+        }
+
+        #attachments{
+            visibility: hidden;
+        }
+
+        .form-footer{
+            background-color: #ECEEF1;
+            color: whitesmoke;
+            padding: 20px;
+            border: 2px #BBC0CA solid;
+            border-top: 0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .form-footer input{
+            background-color: #00C697;
+            color: white;
+            font-size: 18px;
+            font-weight: bolder;
+            border: #00C697 2px solid;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .form-footer div{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">TO THE NEW</div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>Quick Help</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="form-wrapper">
+            <form action="" enctype="multipart/form-data" class="form">
+                <div class="form-header">
+                    <h2>Bug Report</h2>
+                </div>
+                <div class="form-content">
+                    <div>
+                        <label for="title">Title:*</label><br>
+                        <input type="text" id="title">
+                    </div>
+                    <div>
+                        <label for="desc">Description:*</label><br>
+                        <textarea rows="4"  id="desc"></textarea>
+                    </div>
+                    <div>
+                        <label for="os">Operating System:</label>
+                        <select style="background-color:#00C697;" id="os">
+                            <option value="Windows 10">Windows 10</option>
+                            <option value="Windows XP">Windows XP</option>
+                            <option value="Windows 7">Windows 7</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <label for="product">Product:*</label>
+                        <select id="product">
+                            <option value="formoid">Formoid</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="version">Version:*</label><br>
+                        <input type="text" id="version">
+                    </div>
+                    <div>
+                        <label>License:</label>
+                        <div class="radio">
+                            <div ><input type="radio" name="license" >Free</div>
+                            <div><input type="radio" name="license" >Business</div>
+                        </div>
+                    </div>
+
+                        <label for="severity">Severity:</label><br>
+                        <select id="severity">
+                            <option value="critical">Critical</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+
+                    <div>
+                        <label for="attachments">Attachments:</label><br>
+                        <div  class="upload-btn">
+                            No file chosen
+                            <input type="file" id="attachments"><div style="color:white;font-size:smaller;">Choose Files</div></div>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <div><input type="submit" value="Send"></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
