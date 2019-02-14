@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area Of Circle</title>
+
+    <script>
+        function pal() {
+            var r=prompt("Enter the radius");
+            if(isNaN(r)==false) {
+                var area = 3.14 * r * r;
+                document.getElementById("id1").value = area;
+            }
+            else
+            {
+                window.alert("Incorrect value!! Try Again");
+
+            }
+
+        };
+    </script>
+</head>
+<body>
+<H2>Q3)
+
+    Area of circle
+</H2>
+<div style="margin-left:auto;margin-right: auto;">
+    <p style="text-align: center;"> AREA OF CIRCLE
+
+    </p>
+    <hr>
+    <button style="position: absolute;left:44%;" onclick="pal()" >CHECK AREA</button>
+    <br>
+    <br>
+   <p style="margin-left:35%;"> AREA: <input type="text" style="position: absolute;left:42%;" id="id1">
+   </p></div></body>
+</html>

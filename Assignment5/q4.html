@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUESTION 4</title>
+
+    <script>
+        function pal() {
+ var obj1={
+     name:'pooja',id:44040,salary:400
+ };
+console.log("Copying to Object2");
+ let obj2=obj1;
+const key=Object.keys(obj1);
+const key2=Object.keys(obj2);
+const key3=Object.values(obj1);
+const key4=Object.values(obj2);
+            console.log("Object1-");
+ for(i=0;i<Object.keys(obj1).length;i++)
+ {
+     console.log("keys:-"+key[i]+"  values-"+key3[i]);
+ }
+            console.log("Object2-");
+
+            for(i=0;i<Object.keys(obj1).length;i++) {
+                console.log("keys:-" + key2[i] + "  values-" + key4[i]);
+            }
+        };
+    </script>
+</head>
+<body>
+
+
+<H2>Q 4) Copy information of one object to another and log it to console.
+</H2>
+<div style="margin-left:auto;margin-right: auto;">
+    <p style="text-align: center;"> Copying Object
+
+    </p>
+    <hr>
+    <button style="position: absolute;left:44%;" onclick="pal()" >START COPY</button>
+</div></body>
+</html>

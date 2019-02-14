@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUESTION 5</title>
+
+    <script>
+        function pal() {
+            var obj1=[
+                    {name:'pooja',age:20,salary:9000,DOB:'01/1/1999'},
+                {name:'Ravi',age:30,salary:900,DOB:'21/1/1989'},
+        {name:'Anjali',age:19,salary:3000,DOB:'11/1/2000'},
+        {name:'Amit',age:18,salary:700,DOB:'01/2/2001'},
+
+        ];
+            console.log("Object Created- ");
+            for(var i=0;i<obj1.length;i++)
+            {
+                console.log(obj1[i]);
+            }
+return obj1;
+        };
+
+        function pal1()
+        { console.clear();
+        var obj2=pal();
+        console.clear();
+        var newArr=[];
+        i=0;
+            for(k=0;k<obj2.length;k++)
+{
+            if(obj2[k].salary>5000)
+            {
+                newArr[i]=obj2[k];
+                i++;
+            }}
+
+console.log("\n"+"Employess with salary greater than 5000");
+            for(var i=0;i<newArr.length;i++)
+            {
+                console.log(newArr[i]);
+            }
+
+        };
+
+
+        function pal2()
+        {
+            console.clear();
+            var obj2=pal();
+console.clear();
+var newarr=[];
+var newarr1=[];
+var newarr3=[];
+i=0;
+            for(k=0;k<obj2.length;k++)
+            {
+                if(obj2[k].age<=20)
+                {
+                    newarr[i]=obj2[k];
+                    i++;
+                }}
+i=0;
+            for(k=0;k<obj2.length;k++)
+            {
+                if(obj2[k].age>20)
+                {
+                    newarr1[i]=obj2[k];
+                    i++;
+                }}
+            console.log("\n"+"Employee with age less than or equal to 20");
+            for(var i=0;i<newarr.length;i++)
+            {
+                console.log("Name :"+newarr[i].name+"\t"+"Age:"+newarr[i].age);
+            }
+            console.log("\n"+"Employee with age more than 20");
+            for(var i=0;i<newarr1.length;i++)
+            {
+                console.log("Name: "+newarr1[i].name+"\t"+"Age: "+newarr1[i].age);
+            }
+            var k=0;
+            for(i=0;i<newarr1.length;i++)
+            {
+                if(newarr1[i].salary<1000)
+                {
+                    newarr3[k]=newarr1[i];
+                k++;
+                }
+
+            }
+            console.log("\n"+"Employee with age > 20 and salary <1000");
+            for(var i=0;i<newarr3.length;i++)
+            {
+                console.log(newarr3[i]);
+            }
+            console.log("\n"+"Updation in salary after increment five times to salry is given "+"\n"+"OLD DATA");
+            for(var i=0;i<newarr3.length;i++)
+            {
+                console.log(newarr3[i]);
+            }
+            console.log("\n"+"NEW DATA");
+            for(var i=0;i<newarr3.length;i++)
+            {
+                newarr3[i].salary=newarr3[i].salary*5;
+                console.log(newarr3[i]);
+            }
+
+
+        };
+    </script>
+</head>
+<body>
+
+
+<H3>Q 5)
+
+    create a list of objects of Employee with info as follow :<BR>
+
+    1)Name, age, salary ,DOB<BR>
+
+    2)filter all employees with salary greater than 5000<BR>
+
+    3)group employee on the basis of their age
+    fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary
+</H3>
+<div style="margin-left:auto;margin-right: auto;">
+
+    <hr>
+    <button style="position: absolute;left:30%;" onclick="pal()" >ANSWER 1</button>
+    <button style="position: absolute;left:40%;" onclick="pal1()" >ANSWER 2</button>
+    <button style="position: absolute;left:52%;" onclick="pal2()" >ANSWER 3</button>
+
+</div>
+(Note- Check Console To View the Answers)</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+
+    <script>
+        function pal() {
+            var str=prompt("Enter the string");
+            var obj="";
+            for(i=str.length-1;i>=0;i--)
+            {
+                obj=obj+str[i];
+            }
+            if(obj==str)
+            {
+document.getElementById("id1").innerHTML=str+" is a palindrome";
+            }
+            else
+            {
+                document.getElementById("id1").innerHTML=str+" is not a palindrome";
+
+            }
+
+        };
+    </script>
+</head>
+<body>
+<H2>Q 2)
+
+    Is palindrome string
+</H2>
+<div style="margin-left:auto;margin-right: auto;">
+   <p style="text-align: center;"> PALINDROME
+
+   </p>
+<hr>
+<button style="position: absolute;left:44%;" onclick="pal()" >CHECK PALINDROME</button>
+   <br>
+    <br>
+    <h4 style="text-align: center;" id="id1"></h4>
+</div></body>
+</html>
