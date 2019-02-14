@@ -1,0 +1,40 @@
+
+<html>
+<head>
+    <title>
+        Question 8
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+    8)Click event not working on element which added dynamicly or via script, make it work using .on method
+</div>
+<div id="test">
+    Click here to add new Heading
+
+</div>
+<script>
+    $(document).ready(function() {
+$("#test").click(function() {
+
+    $("#test").after("<H2 id='new'>New Heading added</H2>");
+});
+
+        $("#new").click(function () {
+            $("#new").append("Will not work using click event");
+        });
+
+        $("body").on("click","#new",function () {
+            $("#new").append("<br> working using .on method but didn't work using click event");
+        });
+
+    });
+
+</script>
+</body>
+</html>

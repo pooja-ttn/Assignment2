@@ -1,0 +1,120 @@
+
+
+<html>
+<head>
+
+    <title>Question 15</title>
+
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <style>
+
+        #main{
+            margin-top: 20px;
+            margin-left:40%;
+        }
+        #heading{
+            margin-top: 40px;
+            margin-left:35%;
+        }
+
+        button{
+            margin-top:20px;
+            margin-left: 8%;
+            height: 45px;
+        }
+        input[type='text']{
+            height:40px ;
+            font-size: 20px;
+        }
+        #data{
+            margin-top: 20px;
+            margin-left: 35%;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<h3>Q15. Retrieve the data from server using ajax get call</h3>
+<div id="heading">
+    <h4>Enter city and country(optional) to get information about it</h4>
+</div>
+<div id="main">
+    <input type="text" name="textbox" id="textbox" placeholder="City,Country"><br>
+    <button id="btn">get data from server</button>
+</div>
+<hr>
+<div id="data">
+    <table id="dataTable" border="2">
+        <thead>
+        <tr>
+            <th>S.No</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Pin Code</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        var count=1;
+        $("#btn").click(function(){
+            
+            if($("#textbox").val()==""){
+                alert("enter city to get information");
+            }else{
+
+                $.ajax({
+                    type:"get",
+                    url:"https://api.opencagedata.com/geocode/v1/json?q="+$("#textbox").val()
+                        +"&key=7a2f91415706488099062fe0f6a83f16&language=en&pretty=1",
+                    success:function(data){
+                        console.log(data);
+                        if(data['results'].length!=0){
+                            for(var k=0;k<data['results'].length;k++){
+                                if(typeof data['results'][k].components.city!="undefined"){
+                                    $("#dataTable >tbody").append(
+                                        "<tr>"+
+                                        "<td>"+count+"</td>"+
+                                        "<td>"+data['results'][k].components.city+"</td>"+
+                                        "<td>"+data['results'][k].components.country+"</td>"+
+                                        "<td>"+data['results'][k].components.postcode+"</td>"+
+                                        "<td>"+data['results'][k].geometry.lat+"</td>"+
+                                        "<td>"+data['results'][k].geometry.lng+"</td>"+
+                                        "</tr>"
+                                    );
+                                    count++;
+                                }
+
+                            }
+                        }else{
+                            alert("city not found");
+                        }
+
+
+                    },
+                    error:function(data){
+                        alert("error in request");
+                    }
+                });
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
+

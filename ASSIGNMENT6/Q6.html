@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <title>
+        Question 4
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<style>
+    p{
+        color:red;
+    }
+</style>
+</head>
+<body>
+
+<div>
+
+   Q 6)After page load change the HTML of div element with "p" element
+</div>
+<div id="main">
+    This will change on page load.
+</div>
+
+<script>
+    $(document).ready(function() {
+$("#main").html("<p> Element changed </p>");
+    });
+
+</script>
+</body>
+</html>

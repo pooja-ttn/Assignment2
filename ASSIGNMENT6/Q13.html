@@ -1,0 +1,46 @@
+
+<html>
+<head>
+    <title>
+        Question 13
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+    Q13) Get the max height of elements using jquery each method
+
+
+
+                <div id="test">
+
+                    <ol style="list-style-type: none;">
+                        <li>This is element 1</li>
+                        <li>Row 1</li>
+                        <li>Row 2</li>
+
+                        <li>Row 3</li>
+                        <li>Row 4</li>
+
+
+                    </ol>
+                </div>
+<div>
+                    <p>This element 2</p>
+                </div>
+
+
+<script>
+    $(document).ready(function() {
+        $("div").each(function(index){
+alert("Height is "+"element"+(index+1)+ " is "+$(this).height()+" px");
+        });
+
+    });
+
+</script>
+</body>
+</html>

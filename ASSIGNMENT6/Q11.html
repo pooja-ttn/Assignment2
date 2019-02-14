@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <title>
+        Question 11
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+   Q11) On clicking on "google" tag. It is taking us to google home page. Stop it from happening.
+
+<BR><br></div>
+<div id="test2">
+<a href="https://www.google.com/">GOOGLE PAGE</a>
+</div>
+<br>
+<br>
+<script>
+    $(document).ready(function() {
+        $("#test2").click(function (event) {
+event.preventDefault();
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>
+        Question 2
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<style>
+    .load{
+    color:red;
+    }
+</style>
+</head>
+<body>
+<p id="main"><h3>Q2) Select a ID name "#test" and add class "load" when DOM is loaded</h3></p>
+<p id="test"></p>
+
+<script>
+    $(document).ready(function(){
+        alert("Press OK to Load DOM");
+        $("#test").addClass("load").append("<h3>load classs added<h3>");
+
+    });
+</script>
+</body>
+</html>

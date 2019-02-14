@@ -1,0 +1,50 @@
+
+<html>
+<head>
+    <title>
+        Question 12
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+   Q12) We have bind a click function to parent div but we want stop it from performing when user clicks on its child li</div>
+
+
+                <div  style="margin-left: 40%; margin-top:10%;margin-right:500px;padding:30px;border-style:solid;border-color: black;height: 100px;"
+                      id="test">
+                    This is parent div
+                    <br>
+                    <br>
+                    <div  style="border-color:yellow;padding:5px 0px 5px 5px; ;border-style:solid;" id="test2">
+<ol>
+    <li>
+        This is child div
+    </li>
+</ol>
+                    </div>
+                </div>
+
+
+
+<script>
+    $(document).ready(function() {
+
+        $("#test").click(function(){
+            alert("This is parent div");
+        });
+
+        $("#test2").click(function(e){
+            alert("This is child div");
+            e.stopPropagation();
+        });
+
+    });
+
+</script>
+</body>
+</html>

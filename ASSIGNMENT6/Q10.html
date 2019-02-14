@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>
+        Question 10
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+    <style>
+
+
+    #test {
+        width: 100px;
+
+    }
+    </style>
+</head>
+<body>
+
+<div>
+
+    Q 10) Create a dropdown menu using hover method in jquery
+
+
+<BR><BR></div>
+
+
+<div>
+        <select id="test">
+            <option   value=" ">Select</option>
+
+            <option   value="Hello">Hello</option>
+            <option  value="Hello1">Hello 1</option>
+
+            <option  value="Hello2">Hello 2</option>
+        </select>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#test").hover(function(){
+         $(this)[0].size=$(this).find("option").length;
+
+        }, function(){
+           $(this)[0].size=0;
+        });
+
+    });
+
+</script>
+</body>
+</html>

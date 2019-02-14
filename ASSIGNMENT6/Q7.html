@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <title>
+        Question 4
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+  Q7) Bind a click function to an "click" element and append next "click" next to it.</div>
+
+<button id="click">CLICK ON ME</button>
+
+<script>
+    $(document).ready(function() {
+
+$("button").click(function(){
+   $("#click").after("<button id='click'>Next Click</button>");
+});    });
+
+</script>
+</body>
+</html>

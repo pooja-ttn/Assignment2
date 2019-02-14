@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Question 17</title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+
+
+<style>
+    *{
+        padding: 0px;
+        margin:0px;
+        position: fixed;
+    }
+
+
+    #main{
+        margin-top: 100px;
+        margin-left: 30%;
+        padding: 20px;
+
+    }
+    img{
+        height: 500px;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+<h3>Q 17)Create a image array and in div create a slide show to animate images of delay of 500ms.</h3>
+
+    <div id="main">
+
+
+    <script>
+    $(document).ready(function(){
+        var curImage=0;
+        var image1=[
+            "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/210264/pexels-photo-210264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/289445/pexels-photo-289445.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/63743/pexels-photo-63743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ];
+        setInterval(crousel,500);
+        function crousel(){
+            if(curImage==3){
+                curImage=0;
+            }else{
+                curImage+=1;
+            }
+            $("#main").html("<img src='"+image1[curImage]+"'/>").css("animation", "fadeout").animate("slow");
+        }
+    });
+
+
+    </script>
+</DIV>
+</body>
+</html>

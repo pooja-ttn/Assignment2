@@ -1,0 +1,41 @@
+
+<html>
+<head>
+    <title>
+        Question 9
+    </title>
+    <meta charset="utf-8"/>
+    <script data-require="jquery@*" data-semver="3.2.1"  src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+   Q9) Get dropdown selected value on onchanage event and append in div container</div>
+<BR>
+<BR>
+<FORM>
+    <select id="test">
+        <option   value="Hello">Hello</option>
+        <option  value="Hello1">Hello 1</option>
+
+        <option  value="Hello2">Hello 2</option>
+    </select>
+</FORM>
+
+<div id="test2">
+
+</div>
+<script>
+    $(document).ready(function() {
+        $("select").change(function () {
+            var s = $("#test option:selected").val();
+            $("#test2").html(s);
+
+        });
+    });
+
+</script>
+</body>
+</html>
