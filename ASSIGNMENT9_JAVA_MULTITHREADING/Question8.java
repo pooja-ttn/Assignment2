@@ -28,7 +28,7 @@ public class Question8 {
         executorService.scheduleWithFixedDelay(new Runnable() {
             @Override
             public void run() {
-                System.out.println("This will give a delay of 3 second");
+                System.out.println("This will give a delay of 1 second");
             }
         }, 2, 1, TimeUnit.SECONDS);
     }
