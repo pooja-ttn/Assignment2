@@ -32,12 +32,6 @@ class MainClass {
                 return -(o1.getValue().compareTo(o2.getValue()));
             }
         });
-
-
-        Map<Integer, Integer> m1 = new LinkedHashMap<Integer, Integer>();
-        for (Map.Entry<Integer, Integer> i1 : list) {
-            m1.put(i1.getKey(), i1.getValue());
-        }
-        System.out.println(m1);
+        System.out.println(list);
     }
 }
