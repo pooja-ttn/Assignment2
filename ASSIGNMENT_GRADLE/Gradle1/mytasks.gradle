@@ -1,0 +1,20 @@
+
+
+task Hello << {
+    println"This is the output of mytasks.gradle"
+}
+
+
+Hello{
+    println"This will be appended after Hello "
+}
+
+
+task Bye<<{
+    println"This is the last line"
+}
+Bye.dependsOn{
+    tasks.findAll {
+        task -> task.name.startsWith("Hello")
+    }
+}
