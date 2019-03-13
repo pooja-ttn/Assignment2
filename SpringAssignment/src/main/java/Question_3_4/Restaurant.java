@@ -28,7 +28,6 @@ interface HotDrink{
     void prepareHotDrink();
 
 }
-@Component
 class Tea implements HotDrink{
 
    public void prepareHotDrink(){
@@ -51,11 +50,11 @@ class ExpressTea implements HotDrink{
 Use @Autowired annotation to wire Tea with Restaurant class Using setter method, field and constructor.
 
 */
+@Component
 @Controller
 public class Restaurant {
     @Autowired
- /*   @Qualifier("tea")*/
-   private HotDrink hotDrink;
+    private HotDrink hotDrink;
 
     Restaurant(){}
 
@@ -76,10 +75,11 @@ public class Restaurant {
     Q8)   Use @Required annotation for hotDrink setter method in Restaurant class.
 
     */
-
     @Autowired
     //@Required
     public void setHotDrink(HotDrink hotDrink) {
         this.hotDrink = hotDrink;
     }
+
+
 }
