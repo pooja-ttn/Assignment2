@@ -50,7 +50,7 @@ class ExpressTea implements HotDrink{
 
 Use @Autowired annotation to wire Tea with Restaurant class Using setter method, field and constructor.
 
-*/
+*/@Component
 @Controller
 public class Restaurant {
     @Autowired
@@ -77,7 +77,7 @@ public class Restaurant {
 
     */
 
-    @Autowired
+    //@Autowired
     //@Required
     public void setHotDrink(HotDrink hotDrink) {
         this.hotDrink = hotDrink;
