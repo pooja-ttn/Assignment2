@@ -53,7 +53,7 @@ public class Dao {
     User getUserDetailsUsingMapper(){
         String sql="Select * from UserTable where username=?;";
         System.out.println("\n----------------Question 9-------------------------");
-        return jdbcTemplate.queryForObject(sql,new Object[]{"Harsh"},new BeanPropertyRowMapper<User>());
+        return jdbcTemplate.queryForObject(sql,new Object[]{"Harsh"},new UserMapper());
     }
 
 
