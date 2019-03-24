@@ -15,11 +15,14 @@ public class Student1Controller {
 
 @Autowired
     Student1Service studentService;
-
-    @RequestMapping("/showDatabase")
-    String show(Model model){
-        model.addAttribute("output",studentService.getBooks());
-
+ @RequestMapping("/showDatabase")
+    String show(){
         return "question7.html";
+    }
+
+    @RequestMapping("/getContent")
+    @ResponseBody
+    List<Student1> get(){
+        return studentService.getBooks();
     }
 }
